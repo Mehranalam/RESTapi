@@ -35,3 +35,40 @@ that means just remove a file at main dir this file atoumatic removed from `/vag
 ```bash
 cd /Vagrant
 ```
+
+#### feature of FASTAPI
+
+- Automatic documentation
+- - Swaggar
+- - ReDoc
+
+- standard Python
+- Security and auth
+- Dependency injectoin
+
+- teastin covarage
+
+## hello-world api :D
+
+first step build a virtual env for workspace with this commands and install `fastapi` package.
+
+```bash
+$ python3 -m venv venv
+
+$ source /venv/bin/activate
+
+$ pip install fastapi
+```
+
+now create a `main.py` file and read https://fastapi.tiangolo.com/tutorial/.
+for runserver at local just use `unicorn`.
+
+```bash
+$ unicorn main:app --reload
+```
+
+> for run at termianl use `uvicorn main:app --reload` in this command
+> `app` : mean instance varibale -> `app = FastAPI()` and `main` : mean name of this file
+> uvicorn main:app
+
+#### best information in [main.py](main.py) or main code with command and doctype.
