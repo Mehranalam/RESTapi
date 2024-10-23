@@ -1,3 +1,4 @@
+from enum import Enum
 from fastapi import FastAPI
 
 app = FastAPI()
@@ -43,3 +44,16 @@ mean:
 @app.get("/blog/all")
 def get_all_blog():
     return {"message" : "All blog provided"}
+
+
+# Predefined path :F
+# predefined values with <Enum>
+class BlogType(str, Enum):
+    short = 'short'
+    story = 'story'
+    howto =  'howto'
+
+# you can not pass data in {type} else BlogType Enums :)
+@app.get('/blog/type/{type}')
+def blog_type(type: BlogType):
+    return {"message" : f"Blog type: {type}"}
